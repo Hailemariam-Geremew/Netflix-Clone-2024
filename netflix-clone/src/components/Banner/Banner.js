@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from "../../utils/axios.js"
-import requests from "../../Utils/requests.js"
+import requests from "../../utils/requests.js"
 
-import "./banner.css"
+import "../Banner/banner.css"
 
 
 
@@ -21,7 +21,7 @@ function Banner() {
     })()
   },[]);
   function truncate(str,n){
-    return str?.length > n ? substr(0,n-1)+ '...' :str;
+    return str?.length > n ? str.substr(0, n-1) + '...' :str;
   }
   return (
     <div className='banner' style={{
